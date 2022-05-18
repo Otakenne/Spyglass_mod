@@ -169,7 +169,7 @@ public class WordTokenizer implements Tokenizer {
             if (!multipleWords) {
                 // One word, no explicit characters
                 // input is only one word, i.e. "u41"
-                return onlyLettersOrDigits(token, threshold, 0);
+                return false; //onlyLettersOrDigits(token, threshold, 0);
             } else if (containsExplicitChar) {
                 // Multiple words, has explicit character
                 // Must have a space, the explicit character, then a letter or digit

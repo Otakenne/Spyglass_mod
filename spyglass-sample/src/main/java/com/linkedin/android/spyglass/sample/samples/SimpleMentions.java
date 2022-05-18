@@ -45,6 +45,7 @@ public class SimpleMentions extends AppCompatActivity implements QueryTokenRecei
         editor.displayTextCounter(false);
         editor.setQueryTokenReceiver(this);
         editor.setHint(getResources().getString(R.string.type_city));
+
         cities = new City.CityLoader(getResources());
     }
 

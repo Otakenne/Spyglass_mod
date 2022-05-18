@@ -49,10 +49,10 @@ public class GridMentions extends AppCompatActivity implements QueryTokenReceive
     private static final String BUCKET = "people-network";
     private static final WordTokenizerConfig tokenizerConfig = new WordTokenizerConfig
             .Builder()
-            .setWordBreakChars(", ")
-            .setExplicitChars("")
-            .setMaxNumKeywords(2)
-            .setThreshold(1)
+//            .setWordBreakChars(" ")
+            .setExplicitChars("@")
+            .setMaxNumKeywords(1)
+            .setThreshold(3)
             .build();
 
     private RecyclerView recyclerView;
@@ -101,7 +101,7 @@ public class GridMentions extends AppCompatActivity implements QueryTokenReceive
         List<? extends Suggestible> suggestions = result.getSuggestions();
         adapter = new PersonMentionAdapter(result.getSuggestions());
         recyclerView.swapAdapter(adapter, true);
-        boolean display = suggestions != null && suggestions.size() > 0;
+        boolean display = suggestions.size() > 0;
         displaySuggestions(display);
     }
 

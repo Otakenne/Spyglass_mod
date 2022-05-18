@@ -20,7 +20,8 @@
         android:id="@+id/editor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:imeOptions="flagNoExtractUi"/>
+        android:imeOptions="flagNoExtractUi"
+        android:background="@null"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mentions_grid"

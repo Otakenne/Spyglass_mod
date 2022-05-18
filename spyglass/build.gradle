@@ -71,3 +71,17 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:2.27.0'
     testImplementation 'org.robolectric:robolectric:4.3.1'
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.otakenne'
+                artifactId = 'spyglass_mod'
+                version = '1.0'
+            }
+        }
+    }
+}
